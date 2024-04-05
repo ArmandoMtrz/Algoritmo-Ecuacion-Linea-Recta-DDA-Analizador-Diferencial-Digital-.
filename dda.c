@@ -3,7 +3,7 @@
 #include <math.h>
 #include <GL/glut.h>
 
-void drawLine(int x1, int y1, int x2, int y2) {
+void dda(int x1, int y1, int x2, int y2) {
     int dx = x2 - x1;
     int dy = y2 - y1;
     int steps = abs(dx) > abs(dy) ? abs(dx) : abs(dy);
@@ -31,7 +31,7 @@ void display() {
 
     // Dibuja todas las líneas ingresadas
     // Este es solo un ejemplo, podrías almacenar las coordenadas en una lista o arreglo para manejar múltiples líneas
-    drawLine(2, 1, 8, 5);
+    dda(2, 1, 8, 5);
     
 
     glFlush();
